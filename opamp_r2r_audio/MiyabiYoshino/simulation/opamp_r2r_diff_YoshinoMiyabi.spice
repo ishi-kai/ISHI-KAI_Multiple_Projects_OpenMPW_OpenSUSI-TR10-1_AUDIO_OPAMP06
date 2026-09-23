@@ -1,0 +1,16 @@
+** sch_path: /mnt/c/Data/OneDrive/MyDocuments/Community/ISHIKAI/shuttle/OpenSUSI-TR10/2026/RISE-A/opamp_r2r_audio/YoshinoMiyabi/opamp_r2r_diff_YoshinoMiyabi.sch
+.subckt opamp_r2r_diff_YoshinoMiyabi VDD BPO INP_N INM_N BPI INM INP BNI INM_P INP_P BNO VSS
+*.PININFO VDD:B VSS:B INP:I INM:I INP_N:O INM_N:O INM_P:O INP_P:O BPO:I BPI:I BNI:I BNO:I
+MMINPP1 net1 BPO VDD VDD PMOS w=60.8u l=5u
+MMINPP2 net2 BPI net1 VDD PMOS w=60.8u l=5u
+MMINPP3 INP_P INP net2 VDD PMOS w=60.8u l=5u
+MMINMP1 net3 BPO VDD VDD PMOS w=60.8u l=5u
+MMINMP2 net2 BPI net3 VDD PMOS w=60.8u l=5u
+MMINMP3 INM_P INM net2 VDD PMOS w=60.8u l=5u
+MMINPN2 net4 BNI net5 VSS NMOS w=30.4u l=5u
+MMINPN1 net5 BNO VSS VSS NMOS w=30.4u l=5u
+MMINPN3 INP_N INP net4 VSS NMOS w=30.4u l=5u
+MMINMN2 net4 BNI net6 VSS NMOS w=30.4u l=5u
+MMINMN1 net6 BNO VSS VSS NMOS w=30.4u l=5u
+MMINMN3 INM_N INM net4 VSS NMOS w=30.4u l=5u
+.ends

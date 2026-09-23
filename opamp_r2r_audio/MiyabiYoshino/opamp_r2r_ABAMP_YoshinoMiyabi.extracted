@@ -1,0 +1,23 @@
+* Created by KLayout
+*** My special header ***
+
+* cell opamp_r2r_ABAMP_YoshinoMiyabi
+* pin AB_N
+* pin AB_P
+* pin CAP_N
+* pin CAP_P
+* pin OUT
+* pin VDD
+* pin VSS
+.SUBCKT opamp_r2r_ABAMP_YoshinoMiyabi AB_N AB_P CAP_N CAP_P OUT VDD VSS
+* device instance $1 r0 *1 6723.5,-2940.9 PMOS
+XM$1 VDD AB_P OUT VDD PMOS L=5u W=720u AS=1111.2p AD=1111.2p PS=836.6u PD=836.6u
+* device instance $31 r0 *1 6791.6,-3048.9 NMOS
+XM$31 VSS AB_N OUT VSS NMOS L=5u W=360u AS=586.8p AD=586.8p PS=428.6u PD=428.6u
+* device instance $41 r90 *1 6456.2,-3007 F_CSIO
+XC$41 CAP_N OUT VSS F_CSIO C=3.897816e-12 A=6496.36p P=322.4u X=80.5999990463
++ Y=80.6000009537 m=2
+* device instance $43 r90 *1 6456.2,-2877 F_CSIO
+XC$43 CAP_P OUT VSS F_CSIO C=3.897816e-12 A=6496.36p P=322.4u X=80.5999990463
++ Y=80.6000009537 m=2
+.ENDS opamp_r2r_ABAMP_YoshinoMiyabi
